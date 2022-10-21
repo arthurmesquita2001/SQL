@@ -1,0 +1,30 @@
+(SELECT)
+O comando SELECT é usada para selecionar dados de um banco de dados.
+Os dados retornados são armazenados em uma tabela de resultados, chamada de conjunto de resultados.
+Sintaxe: SELECT coluna1, coluna2, ...
+FROM nome_tabela;
+
+Para selecionar todos os campos da tabela utiliza-se o *:
+Sintaxe: SELECT *
+FROM nome_tabela;
+
+(SELECT DISTINCT)
+O seguinte comando seleciona apenas os valores diferente da coluna, por exemplo
+Selecionar apenas os valores distintos da coluna "País" na tabela "Clientes":
+SELECT DISTINCT país FROM clientes;
+
+(COUNT)
+Para contar a quantidade de valores distintos que se possui na coluna, utiliza-se o COUNT:
+Contar apenas os valores distintos da coluna "País" na tabela "Clientes":
+Sintaxe: SELECT COUNT(DISTINCT país) FROM clientes
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Exercícios de fixação:
+1-Insert the missing statement to get all the columns from the Customers table.
+Sintaxe: SELECT * FROM Custormers
+
+2-Write a statement that will select the City column from the Customers table.
+Sintaxe: SELECT City FROM Customers
+
+3-Select all the different values from the Country column in the Customers table.
+Sintaxe: SELECT DISTINCT Country FROM Customers
+
