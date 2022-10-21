@@ -1,0 +1,47 @@
+(WHERE)
+
+O comando WHERE é usado para filtrar registros, extraindo apenas os registros que atendem a uma condição especificada.
+Sintaxe:SELECT coluna1, coluna2, ...
+FROM nometabela
+WHERE condição;
+
+EXEMPLO: A seguinte instrução SQL seleciona todos os clientes do país "México", na tabela "Clientes":
+Sintaxe:SELECT * FROM Customers
+WHERE Country='Mexico';
+
+OBSERVAÇÕES: SQL requer aspas simples em torno de valores de texto (a maioria dos sistemas de banco de dados também permite aspas duplas).
+No entanto, os campos numéricos não devem ser colocados entre aspas.
+
+Operadores
+=	Igual
+>	Maior	
+<	Menor	
+>=	Maior ou igual	
+<=	Menor ou igual	
+<>	Diferente.Em algumas versões a escrita é dessa forma: !=	
+BETWEEN	Entre certo intervalo
+LIKE	Procurar um padrão	
+IN	Especificar diferentes valores em uma coluna
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Exercícios de fixação
+
+1-Select all records where the City column has the value "Berlin".
+Sintaxe: SELECT * FROM Customers
+WHERE City='Berlin';
+
+2-Use the NOT keyword to select all records where City is NOT "Berlin".
+Sintaxe:SELECT * FROM Customers
+WHERE NOT City='Berlin';
+
+3-Select all records where the CustomerID column has the value 32.
+Sintaxe:SELECT * FROM Customers
+WHERE CustomerID=32;
+
+4-Select all records where the City column has the value 'Berlin' and the PostalCode column has the value 12209.
+Sintaxe: SELECT * FROM Customers
+WHERE City='Berlin' AND PostalCode=12209;
+
+5-Select all records where the City column has the value 'Berlin' or 'London'.
+Sintaxe: SELECT * FROM Customers
+WHERE City='Berlin' OR City='London';
