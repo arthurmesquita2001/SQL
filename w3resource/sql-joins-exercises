@@ -86,3 +86,19 @@ FROM customer c
 INNER JOIN orders e 
 ON c.customer_id=e.customer_id
 ORDER BY e.ord_date ASC
+-----------------------------------------------
+15-For those customers from the existing list who put one or more orders, or which orders have been placed by the customer who is not on the list, create a report containing the customer name, city, order number, order date, and purchase amount Go to the editor
+Resposta:
+SELECT x.cust_name,x.city, y.ord_no, y.ord_date,y.purch_amt AS "Order Amount"
+FROM customer x 
+LEFT OUTER JOIN orders y 
+ON x.customer_id=y.customer_id;
+------------------------------------------------
+16- Write a SQL statement to generate a report with the customer name, city, order no. order date, purchase amount for only those customers on the list who must have a grade and placed one or more orders or which order(s) have been placed by the customer who neither is on the list nor has a grade.
+Resposta:
+SELECT h.cust_name,h.city, e.ord_no,
+e.ord_date,e.purch_amt AS "Order Amount" 
+FROM customer h 
+FULL OUTER JOIN orders e 
+ON h.customer_id=e.customer_id 
+WHERE h.grade IS NOT NULL;
